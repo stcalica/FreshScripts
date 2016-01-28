@@ -1,5 +1,1 @@
-django==1.8
-virtualenv
-selenium
-pycurl
-
+echo
