@@ -3,8 +3,37 @@ Use the ExpressJS generator
  - express --ejs -c sass --git 
  
  
- then bower install AngularJS 1 : 
+ edit: 
+ 
+  - .bowerrc 
+  - .gitignore
+ 
+ then bower install AngularJS 1 and Boostrap : 
  
   bower install angular     (installs 1.6.1, last version of Angular 1.0) 
   
+  bower install angular-boostrap
   
+  bower install angular-ui 
+  
+  
+  
+  
+  create AngularJS app.js: 
+  
+  
+  
+  
+  create AngularJS routes.js: 
+  
+  
+  
+  create AngularJS first controller: 
+  
+  
+  
+  create AngularJS views: 
+  
+  
+  
+ 
