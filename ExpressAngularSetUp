@@ -1,0 +1,10 @@
+Use the ExpressJS generator 
+
+ - express --ejs -c sass --git 
+ 
+ 
+ then bower install AngularJS 1 : 
+ 
+  bower install angular     (installs 1.6.1, last version of Angular 1.0) 
+  
+  
