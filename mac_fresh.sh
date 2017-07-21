@@ -3,9 +3,10 @@
 #script to download all programs for debian linux
 
 
-cask-programs="virtualbox virtualbox-dkms"
-brew-programs="git vagrant"
-repos=[ "Warehouse" ] #useful repos for my projects 
+cask-programs="virtualbox virtualbox-dkms docker kubernetes-cli"
+brew-programs="git nvm scala htop python3"
+pylibrary="virtualenv"
+repos=[ "https://github.com/stcalica/stcalica.github.io.git", "https://github.com/stcalica/flufflink.git", "https://github.com/stcalica/NginxDockerProxyPass" ] #useful repos for my projects 
 
 
 #install homebrew
@@ -22,21 +23,15 @@ brew install $brew-programs
 brew cask install $cask-programs
 
 #install python requirements 
-sudo pip install -r requirements.txt
-
+sudo pip install $pylibrary
 
 #create useful directories  
-mkdir ~/Vagrant
 mkdir ~/Code
+cd ~/Code
 
+git clone $repos
 
-#add hashicorp vagrant boxes
-cd ~/Vagrant && mkdir ~/Vagrant/Uprecise32 && cd ./Uprecise32
-vagrant box add precise32 http://files.vagrantup.com/precise32.box 
-vagrant init precise32 
-#need to edit config.vm.box  to = "precise32" in Vagrantfile  
-
-#cd ~/Vagrant && mkdir ./boot2docker && cd ./boot2docker
-#vagrant box add docker https://github.com/mitchellh/boot2docker-vagrant-box/releases/tag/v1.2.0
-#vagrant init docker 
-#need to edit config.vm.box  to = "docker" in Vagrantfile  
+for i in $(repos); 
+do
+   git clone $i 
+done
